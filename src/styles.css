@@ -4,7 +4,7 @@
 html,
 body {
   font-size: large;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 body {

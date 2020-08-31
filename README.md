@@ -4,7 +4,7 @@
 - Shem Brooklyne
 
 ## Description
-Github-Search is an application built using Angular CLI that enables users to search github users on github locally enabled by a Github Api token.
+Github-Search is an application built using Angular CLI that enables users to search github users on github locally enabled by a generated Github Api token.
 Apart from that a user is also able to view searched users' repositories.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) This project was generated with Angular CLI version 10.0.6.

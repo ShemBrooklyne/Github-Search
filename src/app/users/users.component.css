@@ -38,7 +38,16 @@ a {
 .img-thumbnail {
     margin-left: 5%;
     margin-top: 3%;
+    border-radius: 250px;
+    border-style: double;
+    border-width: 1%;
+    border-color: green;
 }
+
+.bio {
+    background-color: rgba(255, 255, 255, 0.555);
+}
+
 
 #labels {
     margin-right: 15%;

@@ -44,5 +44,8 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-
 src/environments
+api_key
+/src/app/services
+
+6419a5ccb4782ac6a9c98be5b7e067bd0c810133

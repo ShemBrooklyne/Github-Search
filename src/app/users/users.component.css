@@ -52,3 +52,12 @@ a {
     margin-right: 15%;
     margin-top: 14%;
 }
+
+.repos {
+    height: 80px;
+    width: 12220px;
+}
+html, body {
+    height: 100%;
+    overflow: hidden;
+}

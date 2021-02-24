@@ -2,9 +2,20 @@
 <div class="container-fluid page">
   <div class="container">
     <form class="form-inline form-group">
-      <input class="form-control mr-2" type="text" name="search" placeholder="All of github" id="search"
-        [(ngModel)]="username" />
-      <button id="search" class="btn btn-outline-success btn-submit" (click)="findProfile()" type="submit">
+      <input
+        class="form-control mr-2"
+        type="text"
+        name="search"
+        placeholder="All of github"
+        id="search"
+        [(ngModel)]="username"
+      />
+      <button
+        id="search"
+        class="btn btn-outline-success btn-submit"
+        (click)="findProfile()"
+        type="submit"
+      >
         Search
       </button>
     </form>
@@ -12,7 +23,11 @@
     <p id="error"></p>
     <div class="card" *ngIf="profile">
       <div class="card-header">
-        <button (click)="toggleRepo()" id="repositories" class="btn btn-success float-right">
+        <button
+          (click)="toggleRepo()"
+          id="repositories"
+          class="btn btn-success float-right"
+        >
           REPOS
         </button>
         <a href="{{ profile.html_url }}" target="_blank">
@@ -20,16 +35,28 @@
         </a>
         <span class="bio">{{ profile.bio }}</span>
         <li class="list-group-item">
-          <span class="badge badge-light mr-2">FOLLOWERS: {{ profile.followers }}</span>
-          <span class="badge badge-light mr-2">FOLLOWING: {{ profile.following }}</span>
-          <span class="badge badge-light mr-2">REPOSITORIES: {{ profile.public_repos }}</span>
-          <span class="badge badge-light mr-2">PROFILE STARS: {{ profile.public_gists }}</span>
+          <span class="badge badge-light mr-2"
+            >FOLLOWERS: {{ profile.followers }}</span
+          >
+          <span class="badge badge-light mr-2"
+            >FOLLOWING: {{ profile.following }}</span
+          >
+          <span class="badge badge-light mr-2"
+            >REPOSITORIES: {{ profile.public_repos }}</span
+          >
+          <span class="badge badge-light mr-2"
+            >PROFILE STARS: {{ profile.public_gists }}</span
+          >
         </li>
       </div>
       <div class="row" [hidden]="hideUser">
         <div class="col-sm-6">
           <figure>
-            <img class="card-img-top img-thumbnail" src="{{ profile.avatar_url }}" alt="user-profile" />
+            <img
+              class="card-img-top img-thumbnail"
+              src="{{ profile.avatar_url }}"
+              alt="user-profile"
+            />
           </figure>
         </div>
         <div class="col-sm-6">
@@ -62,15 +89,11 @@
           </ul>
         </div>
       </div>
-      <div [hidden]="showRepo">
-        <h2>
-          <br />
-          &nbsp; My repositories
-        </h2>
-        <ul class="list-group list-group-flush" *ngFor="let repo of work">
-          <li class="list-group-item">
-            <strong>{{ repo.name }}</strong>
-            <div class="float-right">
+      <!-- <div [hidden]="showRepo">
+        <h2 class="text-white text-center">Active Repositories</h2>
+          <div class="row" *ngFor="let repo of work">
+            <div class="col-sm-6 card repos">
+              <strong>{{ repo.name }}</strong>
               <span class="btn btn-sm btn-outline-light mr-2">
                 {{ repo.watchers_count }}
               </span>
@@ -80,13 +103,14 @@
               <span class="btn btn-sm btn-outline-light mr-2">
                 {{ repo.stargazers_count }}
               </span>
-              <span class="btn btn-sm btn-outline-light mr-2"><a href="{{ repo.html_url }}" target="_blank"> </a></span>
-            </div>
+              <span class="btn btn-sm btn-outline-light mr-2"
+                ><a href="{{ repo.html_url }}" target="_blank"> </a
+              ></span>
             <p>{{ repo.description }}</p>
-          </li>
-          <hr class="line"/>
-        </ul>
-      </div>
+            </div>
+          </div>
+          <hr class="line" />
+      </div> -->
     </div>
   </div>
 </div>
